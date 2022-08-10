@@ -1,0 +1,2547 @@
+{
+    "version": "V1.0.1",
+    "profile": {
+        "productCode": "12345678902",
+        "productDesc": "冰蓄冷系统物模型",
+        "isGW": false,
+        "srcType": "thirdDev",
+        "responseTimeout": 3,
+        "heartbeatTime": 60,
+        "isAttrActiveReport": false,
+        "queryAttrInterval": 20
+    },
+    "comm": {
+        "commType": "bacnet",
+        "commParam": [
+        {
+            "id": "TotalCool",
+            "name": "冰蓄冷系统累计冷量",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "IceStorageEnd",
+            "name": "蓄冰结束",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ChillerReturnPress4",
+            "name": "冷冻水回水压力P4",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ChillerLeavingPress3",
+            "name": "冷冻水出水压力P3",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "CoolAndHot",
+            "name": "冷量和热量",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "CoolingRate",
+            "name": "放冷速度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ChilledWaterFlow",
+            "name": "板换器冷冻水流量",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TotalHot",
+            "name": "冰蓄冷系统累计热量",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Frequency",
+            "name": "蓄冷泵频率",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "IceTankPercentage1",
+            "name": "1号冰槽百分比",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "IceTankPercentage2",
+            "name": "2号冰槽百分比",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ChillerReturnPress2",
+            "name": "冰槽回水压力P2",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "SupplyPress1",
+            "name": "冰槽供水压力P1",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "ColdStorageTank1Percentage",
+            "name": "蓄冷箱1百分比",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "ColdStorageTank2Percentage",
+            "name": "蓄冷箱2百分比",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Temp1",
+            "name": "T1温度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Temp2",
+            "name": "T2温度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Temp3",
+            "name": "T3温度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Temp4",
+            "name": "T4温度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Temp5",
+            "name": "T5温度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Temp6",
+            "name": "T6温度",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "valve1Percentage",
+            "name": "V1阀阀位百分比",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "valve2Percentage",
+            "name": "V2阀阀位百分比",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Analog Value",
+                                        "name":"AV",
+                                        "desc":"AV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "EthyleneGlycolPump1Fault",
+            "name": "乙二醇泵1故障",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "EthyleneGlycolPump1State",
+            "name": "乙二醇泵1状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "EthyleneGlycolPump2Fault",
+            "name": "乙二醇泵2故障",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "EthyleneGlycolPump2State",
+            "name": "乙二醇泵2状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Agitating PumpFault",
+            "name": "搅动泵故障",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Agitating PumpState",
+            "name": "搅动泵状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "SystemFaultAlarm",
+            "name": "系统故障报警",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "SystemFaultHalt",
+            "name": "系统故障停机",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Valve3OffState",
+            "name": "V3阀关状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Valve3OpenState",
+            "name": "V3阀开状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Valve3OpenState",
+            "name": "V4阀关状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Valve4OpenState",
+            "name": "V4阀关状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Valve5OffState",
+            "name": "V5阀关状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "Valve5OpenState",
+            "name": "V5阀开状态",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [{
+                                    "value": "Binary Value",
+                                    "name": "BV",
+                                    "desc": "BV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            
+            "id": "SystemControlModel",
+            "name": "系统控制模式",
+            "accessMode": "ro",
+            "required": true,
+            "dataType": {
+                "type": "struct",
+                "struct": [{
+                        "id": "IP",
+                        "name": "DDC IP",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "string",
+                            "string": {
+                                "format": "ipv4"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Object",
+                        "name": "端口对象",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "enum",
+                            "enum": {
+                                "itemType": "string",
+                                "items": [
+                                    {
+                                        "value":"Multi-State Value",
+                                        "name":"MSV",
+                                        "desc":"MSV"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": "Instance",
+                        "name": "序号",
+                        "accessMode": "ro",
+                        "required": true,
+                        "dataType": {
+                            "type": "number",
+                            "number": {}
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+    
+    
+    },
+    "properties": [{
+        "id": "online",
+        "name": "设备在线状态",
+        "accessMode": "ro",
+        "required": true,
+        "dataType": {
+            "type": "enum",
+            "enum": {
+                "itemType": "string",
+                "items": [{
+                        "value": "true",
+                        "name": "在线"
+                    },
+                    {
+                        "value": "false",
+                        "name": "离线"
+                    }
+                ]
+            }
+        }
+    },
+        {
+        "id":"TotalCool",
+        "name":"冰蓄冷系统累计冷量",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"kw"
+            }
+        }
+    },
+    {
+        "id":"IceStorageEnd",
+        "name":"蓄冰结束",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"结束",
+                "falseDesc":"没结束"
+                }
+            } 
+    } ,
+    {
+        "id":"ChillerReturnPress4",
+        "name":"冷冻水回水压力P4",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+            "unit":"bar"
+            }
+        }
+    },
+    {
+        
+            "id":"ChillerReturnPress3",
+            "name":"冷冻水回水压力P3",
+            "accessMode":"ro",
+            "dataType":{
+                "type":"number",
+                "number":{
+                "unit":"bar"
+                }
+            }
+        
+    },
+    {
+        "id":"CoolAndHot",
+        "name":"冷量和热量",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"KW"
+            }
+        }
+    },
+    {
+        "id":"CoolingRate",
+        "name":"放冷速度",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"ChilledWaterFlow",
+        "name":"板换器冷冻水流量",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"M3/H"
+            }
+        }
+    },
+    {
+        "id":"TotalHot",
+        "name":"冰蓄冷系统累计热量",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"KW"
+            }
+        }
+    },
+    {
+        "id":"Frequency",
+        "name":"蓄冷泵频率",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"HZ"
+            }
+        }
+    },
+    {
+        "id":"IceTankPercentage1",
+        "name":"1号冰槽百分比",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"IceTankPercentage2",
+        "name":"2号冰槽百分比",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"ChillerReturnPress2",
+        "name":"冰槽回水压力P2",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"bar"
+            }
+        }
+    },
+    {
+        "id":"SupplyPress1",
+        "name":"冰槽供水压力P1",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"bar"
+            }
+        }
+    },
+    {
+        "id":"ColdStorageTank1Percentage",
+        "name":"蓄冷箱1百分比",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"ColdStorageTank2Percentage",
+        "name":"蓄冷箱2百分比",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"ColdStorageTankCool",
+        "name":"蓄冷箱冷量",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"冷吨"
+            }
+        }
+    },
+    {
+        "id":"Temp2",
+        "name":"T2温度",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"℃"
+            }
+        }
+    },
+    {
+        "id":"Temp3",
+        "name":"T3温度",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"℃"
+            }
+        }
+    },
+    {
+        "id":"Temp4",
+        "name":"T4温度",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"℃"
+            }
+        }
+    },
+    {
+        "id":"Temp5",
+        "name":"T5温度",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"℃"
+            }
+        }
+    },
+    {
+        "id":"Temp6",
+        "name":"T6温度",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"℃"
+            }
+        }
+    },
+    {
+        "id":"valve1Percentage",
+        "name":"V1阀阀位百分比",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"valve1Percentage",
+        "name":"V1阀阀位百分比",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"number",
+            "number":{
+                "unit":"%"
+            }
+        }
+    },
+    {
+        "id":"EthyleneGlycolPump1Fault",
+        "name":"乙二醇泵1故障",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"故障",
+                "falseDesc":"正常"
+            }
+        }
+    },
+    {
+        "id":"EthyleneGlycolPump1State",
+        "name":"乙二醇泵1状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"运行",
+                "falseDesc":"停止"
+            }
+        }
+    },
+    {
+        "id":"EthyleneGlycolPump2Fault",
+        "name":"乙二醇泵2故障",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"故障",
+                "falseDesc":"正常"
+            }
+        }
+    },
+    {
+        "id":"EthyleneGlycolPump2State",
+        "name":"乙二醇泵2状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"运行",
+                "falseDesc":"停止"
+            }
+        }
+    },
+    {
+        "id":"Agitating PumpFault",
+        "name":"搅动泵故障",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"故障",
+                "falseDesc":"正常"
+            }
+        }
+    },
+    {
+        "id":"Agitating PumpState",
+        "name":"搅动泵状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"运行",
+                "falseDesc":"停止"
+            }
+        }
+    },
+    {
+        "id":"SystemFaultAlarm",
+        "name":"搅动泵状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"故障",
+                "falseDesc":"正常"
+            }
+        }
+    },
+    {
+        "id":"SystemFaultHalt",
+        "name":"搅动泵状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"故障停机",
+                "falseDesc":"正常"
+            }
+        }
+    },
+    {
+        "id":"Valve3OffState",
+        "name":"V3阀关状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"到位",
+                "falseDesc":"没到位"
+            }
+        }
+    },
+    {
+        "id":"Valve3OpenState",
+        "name":"V3阀开状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"到位",
+                "falseDesc":"没到位"
+            }
+        }
+    },
+    {
+        "id":"Valve4OffState",
+        "name":"V4阀关状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"到位",
+                "falseDesc":"没到位"
+            }
+        }
+    },
+    {
+        "id":"Valve4OpenState",
+        "name":"V4阀开状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"到位",
+                "falseDesc":"没到位"
+            }
+        }
+    },
+    {
+        "id":"Valve5OffState",
+        "name":"V5阀关状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"到位",
+                "falseDesc":"没到位"
+            }
+        }
+    },
+    {
+        "id":"Valve5OpenState",
+        "name":"V5阀开状态",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"boolean",
+            "boolean":{
+                "trueDesc":"到位",
+                "falseDesc":"没到位"
+            }
+        }
+    },
+    {
+        "id":"SystemControlModel",
+        "name":"系统控制模式",
+        "accessMode":"ro",
+        "dataType":{
+            "type":"enum",
+                "enum": {
+                    "itemType": "number",
+                    "items": [{
+                            "value": "1",
+                            "name": "网络"
+                        },
+                        {
+                            "value": "2",
+                            "name": "本地"
+                        }
+                    ]
+            }
+        }
+    }
+    ],
+    
+    "services": [],
+    "events": [
+        {
+            "id": "EthyleneGlycolPump1FaultAlarm",
+            "name": "乙二醇泵1故障告警",
+            "type": "fault",
+            "parameters": [{
+                "id": "fault",
+                "name": "故障告警",
+                "accessMode": "ro",
+                "dataType": {
+                    "type": "enum",
+                    "enum": {
+                        "itemType": "string",
+                        "items": [{
+                            "value": "1",
+                            "name": "故障"
+                        }]
+                    }
+                }
+            }]
+        },
+        {
+            "id": "EthyleneGlycolPump2FaultAlarm",
+            "name": "乙二醇泵2故障告警",
+            "type":"fault",
+            "parameters": [
+                {
+					"annotation": "",
+                    "id": "1",
+                    "name": "故障告警",
+					"dataType": {
+                        "type": "enum",
+                        "enum": {
+                            "itemType": "string",
+                            "items": [{
+                                "value": "1",
+                                "name": "故障"
+                            }]
+                        }
+					}
+                }
+            ]
+        },
+        {
+            "id": "Agitating PumpFaultAlarm",
+            "name": "搅动泵故障告警",
+            "type":"fault",
+            "parameters": [
+                {
+					"annotation": "",
+                    "id": "1",
+                    "name": "故障告警",
+					"dataType": {
+                        "type": "enum",
+                        "enum": {
+                            "itemType": "string",
+                            "items": [{
+                                "value": "1",
+                                "name": "故障"
+                            }]
+                        }
+					}
+                }
+            ]
+        },
+        {
+            "id": "SystemFaultAlarm",
+            "name": "系统故障告警",
+            "type":"fault",
+            "parameters": [
+                {
+					"annotation": "",
+                    "id": "1",
+                    "name": "故障告警",
+					"dataType": {
+                        "type": "enum",
+                        "enum": {
+                            "itemType": "string",
+                            "items": [{
+                                "value": "1",
+                                "name": "故障"
+                            }]
+                        }
+					}
+                }
+            ]
+        },
+        {
+            "id": "SystemFaultHaltAlarm",
+            "name": "系统故障停机告警",
+            "type":"fault",
+            "parameters": [
+                {
+					"annotation": "",
+                    "id": "1",
+                    "name": "故障告警",
+					"dataType": {
+                        "type": "enum",
+                        "enum": {
+                            "itemType": "string",
+                            "items": [{
+                                "value": "1",
+                                "name": "故障停机"
+                            }]
+                        }
+					}
+                }
+            ]
+        }
+
+    ]
+}
